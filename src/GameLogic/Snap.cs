@@ -93,6 +93,7 @@ namespace CardGames.GameLogic
 				_deck.Shuffle ();		// Return the cards and shuffle
 
 				FlipNextCard ();		// Flip the first card...
+				_gamerTimer.Start();
 			}
 		}
 			
@@ -113,6 +114,11 @@ namespace CardGames.GameLogic
 		public void Update()
 		{
 			//TODO: implement update to automatically slip cards!
+			if (_gameTimer.Ticks > _flipTime)
+			{
+				_gamerTimer.Reset ();
+				FlipNextCard ();
+			}
 		}
 
 		/// <summary>
