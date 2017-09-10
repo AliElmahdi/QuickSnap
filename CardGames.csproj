@@ -176,6 +176,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\images\PTask2_cardsBoard.png" />
+    <None Include="Resources\fonts\Chunk Five Print.otf" />
+    <None Include="Resources\fonts\Chunk.otf" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
