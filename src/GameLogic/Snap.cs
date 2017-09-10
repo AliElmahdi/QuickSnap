@@ -116,7 +116,7 @@ namespace CardGames.GameLogic
 			//TODO: implement update to automatically slip cards!
 			if (_gameTimer.Ticks > _flipTime)
 			{
-				_gamerTimer.Reset ();
+				_gameTimer.Reset ();
 				FlipNextCard ();
 			}
 		}
