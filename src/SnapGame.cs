@@ -10,9 +10,10 @@ namespace CardGames
         {
             Bitmap cards;
             cards = SwinGame.LoadBitmapNamed ("Cards", "Cards.png");
-            SwinGame.BitmapSetCellDetails (cards, 82, 110, 13, 5, 53);      // set the cells in the bitmap to match the cards
+            SwinGame.BitmapSetCellDetails (cards, 82, 110, 13, 5, 53);
+			SwinGame.LoadFontNamed ("GameFont","Chunkfive.otf", 24);// set the cells in the bitmap to match the cards
 	    	SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
-			SwinGame.LoadFontNamed ("GameFont","Chunkfive.otf", 24);
+
 
 
         }
@@ -32,21 +33,26 @@ namespace CardGames
 			{
 				myGame.Start ();
 			}
-			if(myGame.IsStarted)
-			{
-				SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
-				SwinGame.PlaySoundEffect ("Slap");
+			if(myGame.IsStarted){
+
+
+
 				if(SwinGame.KeyTyped (KeyCode.vk_LSHIFT)&&
 				  SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 				{
-					//TODO: add sound effects
+					SwinGame.LoadSoundEffectNamed("Correct", "Correct.wav");
+					SwinGame.PlaySoundEffect ("Correct");
 				}
 				else if(SwinGame.KeyTyped(KeyCode.vk_LSHIFT))
 				{
+					SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("Slap");
 					myGame.PlayerHit(0);
 				}
 				else if(SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 				{
+					SwinGame.LoadSoundEffectNamed("Swish", "Swish.wav");
+					SwinGame.PlaySoundEffect ("Slap");
 					myGame.PlayerHit(1);
 				}
 			}
@@ -59,6 +65,7 @@ namespace CardGames
 		private static void DrawGame(Snap myGame)
 		{
 			SwinGame.DrawBitmap("PTask2_cardsBoard.png", 0,0);
+
 
 			// Draw the top card
 			Card top = myGame.TopCard;

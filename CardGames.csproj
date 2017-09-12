@@ -157,9 +157,6 @@
     <None Include="Resources\images\SwinGameAni.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\images\Thumbs.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Resources\panels\FileDialog.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -176,8 +173,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\images\PTask2_cardsBoard.png" />
-    <None Include="Resources\fonts\Chunk Five Print.otf" />
-    <None Include="Resources\fonts\Chunk.otf" />
     <None Include="Resources\fonts\Chunkfive.otf" />
   </ItemGroup>
   <Target Name="CopyFiles">
